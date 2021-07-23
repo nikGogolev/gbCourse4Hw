@@ -56,7 +56,7 @@ class Hamburger {
 		let toppings = [];
 		for (let topping in this.#toppings){
 			if (this.#toppings[topping]){
-				toppings.push(`${topping}x${this.#toppings[topping]}`);
+				toppings.push(`${topping} x ${this.#toppings[topping]}`);
 			}
 		}
 		return toppings;
