@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Гамбургер</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">Гамбургер</div>
+</header>
+<main>
+    <form class="form">
+		<fieldset>
+		<legend>Ваш заказ</legend>
+			<div>
+				<label for="size">Выберите размер</label>
+				<select id="size">
+					<option value="min">Маленький</option>
+					<option value="max">Большой</option>
+				</select>
+			</div>
+			<div>
+				<label for="stuffing">Выберите начинку</label>
+				<select id="stuffing">
+					<option value="cheese">Сыр</option>
+					<option value="salad">Салат</option>
+					<option value="potato">Картошка</option>
+				</select>
+			</div>
+			<div>
+				<label for="grass"><input class="topping" type="checkbox" id="grass" value="grass">Посыпать приправой</label>
+			</div>
+			<div>
+				<label for="mayonnaise"><input class="topping" type="checkbox" id="mayonnaise" value="myonnaise">Добавить майонез</label>
+			</div>
+			<input type="submit" value="Рассчитать" id="calculate">
+		</fieldset>
+		<fieldset>
+		<legend>Ваш гамбургер</legend>
+			<div>Размер: <output class = "hamb-size"></output></div>
+			<div>Начинка: <output class = "hamb-stuffing"></output></div>
+			<div>Цена: <output class = "hamb-price"></output></div>
+			<div>Калорийность: <output class = "hamb-calories"></output></div>
+			<div>
+				<input type="button" class="add-grass" value="Добавить приправу" disabled>
+				<input type="button" class="remove-grass" value="Убрать приправу" disabled>
+			</div>
+			<div>
+				<input type="button" class="add-mayonnaise" value="Добавить майонез" disabled>
+				<input type="button" class="remove-mayonnaise" value="Убрать майонез" disabled>
+			</div>
+		</fieldset>
+	</form>
+</main>
+<script src="./js/main.js"></script>
+</body>
+</html>
