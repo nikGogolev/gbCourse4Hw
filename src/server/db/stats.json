@@ -1,0 +1,102 @@
+[
+    {
+        "newEvent": "Добавление нового товара",
+        "productName": "Shorts 1",
+        "time": "2021-08-13T08:14:14.013Z"
+    },
+    {
+        "newEvent": "Удаление товара",
+        "productName": "Shorts 1",
+        "time": "2021-08-13T08:14:25.612Z"
+    },
+    {
+        "newEvent": "Добавление нового товара",
+        "productName": "Shirt 1",
+        "time": "2021-08-13T11:09:56.442Z"
+    },
+    {
+        "newEvent": "Добавление нового товара",
+        "productName": "T-shirt 2",
+        "time": "2021-08-13T11:09:57.736Z"
+    },
+    {
+        "newEvent": "Добавление нового товара",
+        "productName": "Jacket 1",
+        "time": "2021-08-13T11:09:59.422Z"
+    },
+    {
+        "newEvent": "Добавление нового товара",
+        "productName": "Jacket 2",
+        "time": "2021-08-13T11:10:00.710Z"
+    },
+    {
+        "newEvent": "Добавление нового товара",
+        "productName": "Jacket 3",
+        "time": "2021-08-13T11:10:03.885Z"
+    },
+    {
+        "newEvent": "Увеличение количесва товара на единицу",
+        "productName": "Jacket 3",
+        "time": "2021-08-13T11:10:04.126Z"
+    },
+    {
+        "newEvent": "Увеличение количесва товара на единицу",
+        "productName": "Jacket 3",
+        "time": "2021-08-13T11:10:04.350Z"
+    },
+    {
+        "newEvent": "Увеличение количесва товара на единицу",
+        "productName": "T-shirt 2",
+        "time": "2021-08-13T11:10:39.347Z"
+    },
+    {
+        "newEvent": "Уменьшение количесва товара на единицу",
+        "productName": "T-shirt 2",
+        "time": "2021-08-13T11:11:32.643Z"
+    },
+    {
+        "newEvent": "Удаление товара",
+        "productName": "T-shirt 2",
+        "time": "2021-08-13T11:11:33.364Z"
+    },
+    {
+        "newEvent": "Удаление товара",
+        "productName": "Jacket 1",
+        "time": "2021-08-13T11:11:33.760Z"
+    },
+    {
+        "newEvent": "Добавление нового товара",
+        "productName": "T-shirt 2",
+        "time": "2021-08-13T11:11:35.211Z"
+    },
+    {
+        "newEvent": "Увеличение количесва товара на единицу",
+        "productName": "T-shirt 2",
+        "time": "2021-08-13T11:11:36.564Z"
+    },
+    {
+        "newEvent": "Удаление товара",
+        "productName": "Shirt 1",
+        "time": "2021-08-13T13:12:24.042Z"
+    },
+    {
+        "newEvent": "Удаление товара",
+        "productName": "Jacket 2",
+        "time": "2021-08-13T13:12:24.060Z"
+    },
+    {
+        "newEvent": "Удаление товара",
+        "productName": "Jacket 3",
+        "time": "2021-08-13T13:12:24.080Z"
+    },
+    {
+        "newEvent": "Удаление товара",
+        "productName": "T-shirt 2",
+        "time": "2021-08-13T13:12:24.099Z"
+    },
+    {
+        "newEvent": "Добавление нового товара",
+        "productName": "Jacket 2",
+        "time": "2021-08-13T13:12:29.405Z"
+    }
+]
