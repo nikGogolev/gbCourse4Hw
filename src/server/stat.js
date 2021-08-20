@@ -33,7 +33,7 @@ const stat = (req, action) => {
 		case 'add':
 			find = products.find(el => el.product_id === +req.body.product_id);
 			newEvent = {
-				newEvent: 'Добавление нового товара',
+				event: 'Добавление нового товара',
 				productName: find.product_name,
 				time: new Date,
 			};
@@ -42,17 +42,24 @@ const stat = (req, action) => {
 		case 'change':
 			find = products.find(el => el.product_id === +req.params.id);
 			newEvent = {
-				newEvent: `${req.body.quantity > 0 ? 'Увеличение' : 'Уменьшение'} количесва товара на единицу`,
+				event: `${req.body.quantity > 0 ? 'Увеличение' : 'Уменьшение'} количества товара на единицу`,
 				productName: find.product_name,
 				time: new Date,
 			};
 			writeEvent(newEvent);
 			break;
 		case 'del':
-			find = products.find(el => el.product_id === +req.body.product_id);
+			find = products.find(el => el.product_id === +req.params.id);
 			newEvent = {
-				newEvent: `Удаление товара`,
+				event: `Удаление товара`,
 				productName: find.product_name,
+				time: new Date,
+			};
+			writeEvent(newEvent);
+			break;
+		case 'clear':
+			newEvent = {
+				event: `Очистка корзины`,
 				time: new Date,
 			};
 			writeEvent(newEvent);

@@ -28,8 +28,9 @@ const product = {
 				</div>
 			</div>
 
-			<h3 class="featured-items-box-item-heading"><router-link :to="'/productPage/'+product.product_id"  class="featured-items-box-item-link">{{product.product_name}}</router-link></h3>
+			<h3 class="featured-items-box-item-heading"><router-link :to="'/pageProduct/'+product.product_id"  class="featured-items-box-item-link">{{product.product_name}}</router-link></h3>
 			<p class="featured-items-box-item-text">{{product.product_description}}</p>
+			<p class="featured-items-box-item-heading">Size: {{product.product_size}}</p>
 			<p class="featured-items-box-item-cost">\${{product.product_price}}</p>
 		</div>`
 };
@@ -72,7 +73,7 @@ const catalog = {
 			.then(data => {
 				this.allProducts = data;
 				this.chooseNRandomGoods(this.productsnumber);
-				this.$root.$refs.search.filter();
+				this.$root.$refs.search.mainFilter();
 			});
 		
 	},

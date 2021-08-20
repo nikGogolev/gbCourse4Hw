@@ -56,7 +56,7 @@
     "product_description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "product_price": 76,
 	"product_color": "WHITE",
-	"product_size": "XXL",
+	"product_size": "S",
 	"product_collection": "MEN"
   },
   {
@@ -82,10 +82,10 @@
   {
     "image_src": "catalog-image-9.png",
     "product_id": 9,
-    "product_name": "Shirt 1",
+    "product_name": "Shirt 2",
     "product_description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-    "product_price": 23,
-	"product_color": "DARGREEN",
+    "product_price": 89,
+	"product_color": "DARKGREEN",
 	"product_size": "XL",
 	"product_collection": "MEN"
   }

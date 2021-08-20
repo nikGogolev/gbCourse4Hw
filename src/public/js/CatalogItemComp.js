@@ -42,14 +42,14 @@ const catalogItem = {
 	template:`
 		<div>
         <section class="container product-image">
-			<router-link :to="'/productPage/'+prevItem">
+			<router-link :to="'/pageProduct/'+prevItem">
             <button class="product-image-prev">
                 <svg class="product-image-prev-icon" width="13" height="23">
                     <use width="13" height="23" xlink:href="#arrow-left-icon"></use>
                 </svg>
             </button>
 			</router-link>
-			<router-link :to="'/productPage/'+nextItem">
+			<router-link :to="'/pageProduct/'+nextItem">
             <button class="product-image-next">
                 <svg class="product-image-next-icon" width="13" height="23">
                     <use width="13" height="23" xlink:href="#arrow-right-icon"></use>

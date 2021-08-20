@@ -5,7 +5,8 @@ const stat = require('./stat');
 const actions = {
   add: cart.add,
   change: cart.change,
-  del: cart.del
+  del: cart.del,
+  clear: cart.clear
 };
 
 const handler = (req, res, action, file) => {
@@ -19,7 +20,8 @@ const handler = (req, res, action, file) => {
           res.send('{"result": 0}');
         } else {
           res.send('{"result": 1}');
-		  stat(req, action);
+          console.log(action);
+		      stat(req, action);
         }
       })
     }

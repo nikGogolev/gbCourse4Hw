@@ -77,7 +77,7 @@ const cart = {
 					}
 				});
             } else {
-                this.$root.deleteJson(`/api/cart`, item)
+                this.$root.deleteJson(`/api/cart/${item.product_id}`)
 				.then(data => {
 					if (data.result === 1){
 						console.log()
@@ -91,7 +91,7 @@ const cart = {
             }
         },
 		removeAll(item) {
-                this.$root.deleteJson(`/api/cart`, item)
+                this.$root.deleteJson(`/api/cart/${item.product_id}`)
 				.then(data => {
 					if (data.result === 1){
 						console.log()
@@ -104,20 +104,15 @@ const cart = {
 				});
         },
 		clearCart() {
-			this.cartItems.forEach((item) => {
-				this.$root.deleteJson(`/api/cart`, item)
+			this.$root.deleteJson(`/api/cart/`)
 				.then(data => {
 					if (data.result === 1){
-						console.log()
-						this.cartItems.splice(this.cartItems.indexOf(item), 1);
-						this.countGoods--;
-						this.amount -= item.product_price*item.quantity;
+						this.cartItems= [];
+						this.countGoods = 0;
 					} else {
 						this.$root.$refs.error.setError('Ошибка');
 					}
 				});
-			});
-
         },
 		showHideCart(){
 			this.isInsvisible = !this.isInsvisible;
@@ -145,7 +140,7 @@ const cart = {
 			<div class="cart-block" v-bind:class="{invisible: isInsvisible}">
 				<cart-item v-for="item of cartItems" :key="item.product_id" :item="item"></cart-item>
 				<div v-if="!cartItems.length">Корзина пуста</div>
-				<router-link class="featured-items-more-button" to="/cartPage">Перейти в корзину</router-link>
+				<router-link class="featured-items-more-button" to="/pageCart">Перейти в корзину</router-link>
 			</div>
         </li>
 		`

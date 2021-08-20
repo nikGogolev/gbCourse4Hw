@@ -2,11 +2,11 @@
 
 import './css/styles.css'
 
-import indexPage from './js/IndexPageComp'
-import catalogPage from './js/CatalogPageComp'
-import productPage from './js/ProductPageComp'
-import cartPage from './js/CartPageComp'
-import registrationPage from './js/RegistrationPageComp'
+import pageIndex from './js/PageIndexComp'
+import pageCatalog from './js/PageCatalogComp'
+import pageProduct from './js/PageProductComp'
+import pageCart from './js/PageCartComp'
+import pageRegistration from './js/PageRegistrationComp'
 
 import cart from './js/CartComp'
 import catalog from './js/CatalogComp'
@@ -55,12 +55,12 @@ function main() {
 }
 
 const routes = [
-    { path: '/', component: indexPage },
-    { path: '/indexPage', component: indexPage },
-    { path: '/catalogPage', component: catalogPage },
-    { path: '/productPage/:id', component: productPage },
-    { path: '/cartPage', component: cartPage },
-    { path: '/registrationPage', component: registrationPage },
+    { path: '/', component: pageIndex },
+    { path: '/pageIndex', component: pageIndex },
+    { path: '/pageCatalog', component: pageCatalog },
+    { path: '/pageProduct/:id', component: pageProduct },
+    { path: '/pageCart', component: pageCart },
+    { path: '/pageRegistration', component: pageRegistration },
     
 
 ]
@@ -75,11 +75,11 @@ const router = new VueRouter({
 const app = new Vue({
     router,
     components: {
-        indexPage,
-        catalogPage,
-        productPage,
-        cartPage,
-        registrationPage,
+        pageIndex,
+        pageCatalog,
+        pageProduct,
+        pageCart,
+        pageRegistration,
 
         cart,
         catalog,

@@ -17,8 +17,12 @@ router.get('/', (req, res) => {
 });
 
 
-router.delete('/', (req, res) => {
+router.delete('/:id', (req, res) => {
   handler(req, res, 'del', cartJSONPath);
+});
+
+router.delete('/', (req, res) => {
+  handler(req, res, 'clear', cartJSONPath);
 });
 
 router.put('/:id', (req, res) => {

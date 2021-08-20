@@ -21,15 +21,23 @@ const change = (cart, req) => {
 };
 
 const del = (cart, req) => {
-  const find = cart.contents.find(el => el.product_id === +req.body.product_id);
+  const find = cart.contents.find(el => el.product_id === +req.params.id);
   cart.contents.splice(cart.contents.indexOf(find), 1);
   cart.countGoods += -1;
   calcSum(cart);
   return JSON.stringify(cart, null, 4);
 };
 
+const clear = (cart) => {
+  cart.contents = [];
+  cart.countGoods = 0;
+  calcSum(cart);
+  return JSON.stringify(cart, null, 4);
+}
+
 module.exports = {
   add,
   change,
-  del
+  del,
+  clear
 };
