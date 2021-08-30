@@ -2,13 +2,9 @@ import catalog from './CatalogComp'
 
 const pageindex = {
 	components: { catalog },
-	data() {
-		return {
-			catalog,
-		}
-	},
+
 	template: `
-			<main ref="indexPage">
+			<main>
 			<section class="container promo">
 					<div class="promo-wrapper">
 						<video class="promo-video"

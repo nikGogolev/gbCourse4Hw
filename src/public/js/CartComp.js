@@ -99,6 +99,7 @@ const cart = {
 					if (data.result === 1){
 						this.cartItems= [];
 						this.countGoods = 0;
+						this.amount = 0;
 					} else {
 						this.$root.$refs.error.setError('Ошибка');
 					}
