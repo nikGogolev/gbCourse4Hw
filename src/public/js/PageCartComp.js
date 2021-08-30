@@ -1,16 +1,6 @@
 const pageCartItem = {
 	props: ['item'],
-	data(){
-		return {
 
-		}
-	},
-	methods: {
-		
-	},
-	mounted(){
-		
-	},
 	template:`
 		<div class="cart-box-item">
 			<div class="cart-box-item-img-wrapper">
@@ -44,12 +34,9 @@ const pageCart = {
 			cart:'',
 		}
 	},
-	methods: {
 
-	},
 	mounted(){
 		this.cart = this.$root.$refs.cart;
-
 	},
 	template:`
 	<main>

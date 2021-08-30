@@ -1,16 +1,6 @@
 const cartItem = {
 	props: ['item'],
-	data(){
-		return {
 
-		}
-	},
-	methods: {
-		
-	},
-	mounted(){
-		
-	},
 	template:`
 		<div class="cart-item">
 			<div class="product-bio">

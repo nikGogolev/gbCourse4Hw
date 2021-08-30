@@ -1,18 +1,7 @@
 
-
 const product = {
 	props: ['product'],
-	data() {
-		return {
 
-		}
-	},
-	methods: {
-
-	},
-	mounted() {
-
-	},
 	template: `
 		<div class="featured-items-box-item">
 			<div class="featured-items-box-item-image wrapper">

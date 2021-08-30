@@ -1,6 +1,6 @@
 // import '@babel/polyfill'
 
-import './css/styles.css'
+import './css/styles.less'
 
 import pageIndex from './js/PageIndexComp'
 import pageCatalog from './js/PageCatalogComp'
@@ -13,46 +13,8 @@ import catalog from './js/CatalogComp'
 import catalogItem from './js/CatalogItemComp'
 import search from './js/SearchComp'
 import error from './js/ErrorComp'
-
-function main() {
-    var navigationMenu = document.querySelector('.navmenu');
-    var navigationMenuOpen = document.querySelector('.navmenu-open');
-    var navigationMenuClose = document.querySelector('.navmenu-close');
-
-    var menuListItemAccount = document.querySelector('.menu-list-item-account');
-    var menuListItemCart = document.querySelector('.menu-list-item-cart');
-
-    navigationMenuOpen.onclick = function () {
-        if (navigationMenuOpen.checked) {
-            navigationMenu.style.height = '764px';
-            if (window.screen.width <= 375) {
-                menuListItemAccount.style.visibility = 'visible';
-                menuListItemCart.style.visibility = 'visible';
-            }
-        } else {
-            navigationMenu.style.height = '0px';
-            if (window.screen.width <= 375) {
-                menuListItemAccount.style.visibility = 'hidden';
-                menuListItemCart.style.visibility = 'hidden';
-            }
-        }
-
-        navigationMenuClose.onclick = function () {
-            navigationMenu.style.height = '0px';
-            navigationMenuOpen.checked = false;
-            navigationMenuOpen.onclick();
-        }
-    };
-
-    window.onresize = function () {
-        if (window.screen.width >= 375) {
-            menuListItemAccount.style.visibility = 'visible';
-            menuListItemCart.style.visibility = 'visible';
-        }
-    }
-
-
-}
+import navMenu from './js/NavMenuComp'
+import svgLibrary from './js/SVGLibraryComp'
 
 const routes = [
     { path: '/', component: pageIndex },
@@ -66,12 +28,10 @@ const routes = [
 ]
 
 const router = new VueRouter({
-    routes, // сокращённая запись для `routes: routes`
+    routes,
 
 })
 
-
-//const app = new Vue(appMain);
 const app = new Vue({
     router,
     components: {
@@ -85,7 +45,9 @@ const app = new Vue({
         catalog,
         catalogItem,
         search,
-        error
+        error,
+        navMenu,
+        svgLibrary
     },
     watch: {
         $route(to, from) {
@@ -137,32 +99,6 @@ const app = new Vue({
                     this.$refs.error.setError(error);
                 });
         },
-
-    },
-
-    beforeCreated() {
-        
-    },
-    created() {
-        
-    },
-    beforeMount() {
-
-    },
-    mounted() {
-        main();
-        
-    },
-    beforeUpdate() {
-
-    },
-    updated() {
-
-    },
-    beforeDestroy() {
-
-    },
-    destroyed() {
 
     },
 

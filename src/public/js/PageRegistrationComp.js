@@ -1,11 +1,5 @@
 const registrationPage = {
-	data() {
-		return {
 
-		}
-	},
-	mounted() {
-	},
 	template: `
 	<main>
         <section class="container breadcrumps">
